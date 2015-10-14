@@ -1,4 +1,4 @@
-package com.jasonmoix.neuralnet;
+package com.jasonmoix.neuralnet.mlpquant;
 
 /**
  * Created by jmoix on 10/14/2015.

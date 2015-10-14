@@ -1,4 +1,5 @@
 rootProject.name = 'neural-net'
 include 'mlp-quant'
 include 'quant-test'
+include 'mlp-cat'
 

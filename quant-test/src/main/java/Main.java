@@ -1,4 +1,4 @@
-import com.jasonmoix.neuralnet.MLP;
+import com.jasonmoix.neuralnet.mlpquant.MLP;
 
 import java.io.File;
 
