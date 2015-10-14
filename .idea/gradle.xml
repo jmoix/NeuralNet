@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/mlp-cat" />
             <option value="$PROJECT_DIR$/mlp-quant" />
             <option value="$PROJECT_DIR$/quant-test" />
           </set>
