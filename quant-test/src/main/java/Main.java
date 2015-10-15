@@ -1,4 +1,6 @@
 import com.jasonmoix.neuralnet.mlpquant.MLP;
+import com.jasonmoix.neuralnet.nfldata.DataParser;
+import io.vertx.core.json.JsonArray;
 
 import java.io.File;
 
@@ -8,13 +10,25 @@ import java.io.File;
 public class Main {
     public static void main(String[] args){
 
-        double[][] inputValues = getInputValues();
+        /*double[][] inputValues = getInputValues();
         double[][] outputValues = getOutputValues(inputValues);
         MLP mlp = new MLP(inputValues,outputValues, 0.001, 0.9, 0.0001, 3, 2);
         mlp.saveWeights(new File("c:\\weights\\weights.txt"));
-        //MLP mlp = new MLP(new File("c:\\weights\\weights.txt"));
-        System.out.println("Prediction, 1 + 2 + 1 = " + mlp.predict(new double[]{1, 2, 1}));
+        MLP mlp = new MLP(new File("c:\\weights\\weights.txt"));
+        System.out.println("Prediction, 1 + 2 + 1 = " + mlp.predict(new double[]{1, 2, 1}));*/
+        getData();
 
+
+    }
+
+    public static void getData(){
+        DataParser parser = new DataParser();
+        //JsonArray defensivePlayerData = parser.fetchDefensiveData();
+        //JsonArray kickerPlayerData = parser.fetchKickerData();
+        //JsonArray offensivePlayerData = parser.fetchOffensiveData();
+        //System.out.println(defensivePlayerData.encodePrettily());
+        //System.out.println(kickerPlayerData.encodePrettily());
+        //System.out.println(offensivePlayerData.encodePrettily());
     }
 
     public static double[][] getInputValues(){

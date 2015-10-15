@@ -2,4 +2,5 @@ version '1.0-SNAPSHOT'
 
 dependencies {
     compile project(':mlp-quant')
+    compile project(':nfl-data')
 }

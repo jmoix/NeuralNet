@@ -27,5 +27,6 @@
     <orderEntry type="library" exported="" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.5.3" level="project" />
     <orderEntry type="library" exported="" name="Gradle: io.netty:netty-codec:4.0.28.Final" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.5.0" level="project" />
+    <orderEntry type="module" module-name="nfl-data" exported="" />
   </component>
 </module>

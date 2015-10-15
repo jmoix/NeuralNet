@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.HashMap;
 
 /**
@@ -40,32 +41,38 @@ public class DataParser {
         getTeamHashMap();
     }
 
-    public JsonArray fetchOffensiveData(int week){
+    public JsonArray fetchOffensiveData(){
 
         JsonArray offensiveData = new JsonArray();
 
-        for(int j = 1; j < 13; j++) {
+        File[] files = (new File("C:\\GameData\\Offense")).listFiles();
 
-            File file = new File("GameData\\Offense\\" + week + "\\" + j + ".html");
+        for(File week : files) {
 
-            try {
+            File[] dataFiles = week.listFiles();
 
-                Document document = Jsoup.parse(file, "UTF-8", "");
+            for(File data : dataFiles) {
 
-                Elements playertable = document.getElementsByClass("players");
+                try {
 
-                String playerData = playertable.get(0).text();
-                playerData = playerData.replace("Notes", "Note");
+                    Document document = Jsoup.parse(data, "UTF-8", "");
 
-                String[] players = (playerData.split("Note"));
+                    Elements playertable = document.getElementsByClass("players");
 
-                for(int i = 1; i < players.length; i++){
-                    players[i] = removeIllegalChars(players[i]);
-                    offensiveData.add(parseOffensivePlayerData(players[i], week));
+                    String playerData = playertable.get(0).text();
+                    playerData = playerData.replace("Notes", "Note");
+
+                    String[] players = (playerData.split("Note"));
+
+                    for (int i = 1; i < players.length; i++) {
+                        players[i] = removeIllegalChars(players[i]);
+                        offensiveData.add(parseOffensivePlayerData(players[i], Integer.parseInt(week.getName())));
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
 
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
         }
@@ -74,32 +81,36 @@ public class DataParser {
 
     }
 
-    public JsonArray fetchDefensiveData(int week){
+    public JsonArray fetchDefensiveData(){
 
         JsonArray defensiveData = new JsonArray();
+        File[] files = (new File("C:\\GameData\\Defense")).listFiles();
 
-        for(int j = 1; j < 3; j++) {
+        for(File week : files) {
 
-            File file = new File("GameData\\Defense\\" + week + "\\" + j + ".html");
+            File[] dataFiles = week.listFiles();
 
-            try {
+            for(File data : dataFiles) {
 
-                Document document = Jsoup.parse(file, "UTF-8", "");
+                try {
 
-                Elements playertable = document.getElementsByClass("players");
+                    Document document = Jsoup.parse(data, "UTF-8", "");
 
-                String playerData = playertable.get(0).text();
-                playerData = playerData.replace("Notes", "Note");
+                    Elements playertable = document.getElementsByClass("players");
 
-                String[] players = (playerData.split("Note"));
+                    String playerData = playertable.get(0).text();
+                    playerData = playerData.replace("Notes", "Note");
 
-                for(int i = 1; i < players.length; i++){
-                    players[i] = removeIllegalChars(players[i]);
-                    defensiveData.add(parseDefensivePlayerData(players[i], week));
+                    String[] players = (playerData.split("Note"));
+
+                    for (int i = 1; i < players.length; i++) {
+                        players[i] = removeIllegalChars(players[i]);
+                        defensiveData.add(parseDefensivePlayerData(players[i], Integer.parseInt(week.getName())));
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
         }
@@ -108,32 +119,36 @@ public class DataParser {
 
     }
 
-    public JsonArray fetchKickerData(int week){
+    public JsonArray fetchKickerData(){
 
         JsonArray kickerData = new JsonArray();
 
-        for(int j = 1; j < 3; j++) {
+        File[] files = (new File("C:\\GameData\\Kicker")).listFiles();
 
-            File file = new File("GameData\\Kicker\\" + week + "\\" + j + ".html");
+        for(File week : files) {
 
-            try {
+            File[] dataFiles = week.listFiles();
 
-                Document document = Jsoup.parse(file, "UTF-8", "");
+            for(File data : dataFiles) {
+                try {
 
-                Elements playertable = document.getElementsByClass("players");
+                    Document document = Jsoup.parse(data, "UTF-8", "");
 
-                String playerData = playertable.get(0).text();
-                playerData = playerData.replace("Notes", "Note");
+                    Elements playertable = document.getElementsByClass("players");
 
-                String[] players = (playerData.split("Note"));
+                    String playerData = playertable.get(0).text();
+                    playerData = playerData.replace("Notes", "Note");
 
-                for(int i = 1; i < players.length; i++){
-                    players[i] = removeIllegalChars(players[i]);
-                    kickerData.add(parseKickerPlayerData(players[i], week));
+                    String[] players = (playerData.split("Note"));
+
+                    for (int i = 1; i < players.length; i++) {
+                        players[i] = removeIllegalChars(players[i]);
+                        kickerData.add(parseKickerPlayerData(players[i], Integer.parseInt(week.getName())));
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
-            } catch (IOException e) {
-                e.printStackTrace();
             }
 
         }
@@ -172,14 +187,21 @@ public class DataParser {
         player = player.replace("St. Louis ", "StL ");
         player = player.replace("Green Bay ", "GB ");
         player = player.replace("Kansas City ", "KC ");
-        player = player.replace(" Injured Reserve ", " blank ");
-        player = player.replace(" Questionable ", " blank ");
-        player = player.replace(" Probable ", " blank ");
-        player = player.replace(" Battered Midgets ", " blank ");
-        player = player.replace(" Linda's Expert Team ", " blank ");
-        player = player.replace(" Dezpicable Me ", " blank ");
-        player = player.replace(" Luck Dynasty ", " blank ");
-        player = player.replace(" ROMOn Empire ", " blank ");
+        player = player.replace(" Injured Reserve ", " ");
+        player = player.replace(" Questionable ", " ");
+        player = player.replace(" Probable ", " ");
+        player = player.replace(" Battered Midgets ", " FA ");
+        player = player.replace(" Linda's Expert Team ", " FA ");
+        player = player.replace(" Dezpicable Me ", " FA ");
+        player = player.replace(" Luck Dynasty ", " FA ");
+        player = player.replace(" ROMOn Empire ", " FA ");
+        player = player.replace(" Stillnofarverite ", " FA ");
+        player = player.replace(" Cazoid ", " FA ");
+        player = player.replace(" AckJasses ", " FA ");
+        player = player.replace(" FeBrees ", " FA ");
+        player = player.replace(" DeLong ", " FA ");
+        player = player.replace(" Suckerp*nch'd! ", " FA ");
+        player = player.replace(" crapflappers ", " FA ");
         return player;
     }
 
@@ -209,17 +231,25 @@ public class DataParser {
                     .put("position_3", position[2]);
         }
 
-        playerData.put("opponent", playerStats[5]);
-
         String[] statLabels = new String[]{"pa_yds","pa_tds","pa_int","pa_40_yd_comp",
                 "pa_40_yd_td","ru_att","ru_yds","ru_tds","ru_40_yd_att","ru_40_yd_td","re_tgt","re_rec","re_yds"
                 ,"re_td","re_40_yd_rec","re_40_yd_td","rt_td","2pt","fum"};
 
-        for(int i = 13; i < 32; i++){
-            if(playerStats[i].equals("-")) playerData.put(statLabels[i-13], 0);
-            else playerData.put(statLabels[i-13], playerStats[i]);
-        }
+        if(playerStats[4].equals("Bye")){
+            playerData.put("opponent", playerStats[4]);
 
+            for(int i = 13; i < 32; i++){
+                playerData.put(statLabels[i-13], 0);
+            }
+
+        }else {
+            playerData.put("opponent", playerStats[5]);
+
+            for(int i = 13; i < 32; i++){
+                if(playerStats[i].equals("-")) playerData.put(statLabels[i-13], 0);
+                else playerData.put(statLabels[i-13], Integer.parseInt(playerStats[i]));
+            }
+        }
 
         return playerData;
     }
@@ -236,14 +266,27 @@ public class DataParser {
                 .put("week", week)
                 .put("position", "DEF")
                 .put("location",teamLocations.get(playerStats[2]))
-                .put("name", teamNames.get(playerStats[2]))
-                .put("opponent", playerStats[6]);
+                .put("name", teamNames.get(playerStats[2]));
+
 
         String[] statLabels = new String[]{"pts_allowed","sack","safety","int","fum_rec","td","blk_kick","ret_td"};
 
-        for(int i = 14; i < 22; i++){
-            if(playerStats[i].equals("-")) playerData.put(statLabels[i-14], 0);
-            else playerData.put(statLabels[i-14], playerStats[i]);
+        if(playerStats[5].equals("Bye")){
+
+            playerData.put("opponent", playerStats[5]);
+
+            for(int i = 14; i < 22; i++){
+                playerData.put(statLabels[i-14], 0);
+            }
+
+        }else{
+
+            playerData.put("opponent", playerStats[6]);
+
+            for(int i = 14; i < 22; i++){
+                if(playerStats[i].equals("-")) playerData.put(statLabels[i-14], 0);
+                else playerData.put(statLabels[i-14], Integer.parseInt(playerStats[i]));
+            }
         }
 
         return playerData;
@@ -264,11 +307,25 @@ public class DataParser {
         playerData.put("last_name", playerStats[2])
                 .put("team", playerStats[3]);
 
-        String[] statLabels = new String[]{"0-19","20-29","30-39","40-49","50","made"};
+        String[] statLabels = new String[]{"0-19", "20-29", "30-39", "40-49", "50", "made"};
 
-        for(int i = 15; i < 21; i++){
-            if(playerStats[i].equals("-")) playerData.put(statLabels[i-15], 0);
-            else playerData.put(statLabels[i-15], playerStats[i]);
+        if(playerStats[6].equals("Bye")){
+
+            playerData.put("opponent", "Bye");
+
+            for (int i = 15; i < 21; i++) {
+                playerData.put(statLabels[i - 15], 0);
+            }
+
+        }else {
+
+            playerData.put("opponent", playerStats[7]);
+
+            for (int i = 15; i < 21; i++) {
+                if (playerStats[i].equals("-")) playerData.put(statLabels[i - 15], 0);
+                else playerData.put(statLabels[i - 15], Integer.parseInt(playerStats[i]));
+            }
+
         }
 
         return playerData;
