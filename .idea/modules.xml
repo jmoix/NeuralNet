@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/mlp-cat/mlp-cat.iml" filepath="$PROJECT_DIR$/mlp-cat/mlp-cat.iml" />
       <module fileurl="file://$PROJECT_DIR$/mlp-quant/mlp-quant.iml" filepath="$PROJECT_DIR$/mlp-quant/mlp-quant.iml" />
       <module fileurl="file://$PROJECT_DIR$/neural-net.iml" filepath="$PROJECT_DIR$/neural-net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nfl-data/nfl-data.iml" filepath="$PROJECT_DIR$/nfl-data/nfl-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/quant-test/quant-test.iml" filepath="$PROJECT_DIR$/quant-test/quant-test.iml" />
     </modules>
   </component>
