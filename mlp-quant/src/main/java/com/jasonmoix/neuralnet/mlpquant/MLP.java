@@ -26,6 +26,12 @@ public class MLP {
     private double inputValues[][];
     private double expectedValues[][];
     private double predictedValues[][];
+    private double learningRate;
+    private double moment;
+    private String title;
+    private File outputFile;
+
+    private static boolean writeData = true;
 
     public MLP(
             double[][] inputValues,
@@ -34,12 +40,21 @@ public class MLP {
             double moment,
             double targetAccuracy,
             int numInputs,
-            int hiddenNodes){
+            int hiddenNodes,
+            File outputFile,
+            String title){
+        this.title = title;
         this.targetAccuracy = targetAccuracy;
         this.hiddenNodes = hiddenNodes;
-        hiddenLayer = new Layer(hiddenNodes, numInputs + 1, Layer.HIDDEN_LAYER, learningRate, moment);
-        outputLayer = new Layer(1, hiddenNodes + 1, Layer.OUTPUT_LAYER, learningRate, moment);
-        train(inputValues, expectedValues);
+        this.learningRate = learningRate;
+        this.moment = moment;
+        if(outputFile.exists()){
+            loadMLP(outputFile);
+        }else{
+            hiddenLayer = new Layer(hiddenNodes, numInputs + 1, Layer.HIDDEN_LAYER, learningRate, moment);
+            outputLayer = new Layer(1, hiddenNodes + 1, Layer.OUTPUT_LAYER, learningRate, moment);
+        }
+        train(inputValues, expectedValues, outputFile);
     }
 
     public MLP(File inputFile){
@@ -57,15 +72,16 @@ public class MLP {
     }
 
     private void train(double[][] in,
-                       double[][] exp){
+                       double[][] exp,
+                       final File outputFile){
 
 
         initInputValues(in);
         this.expectedValues = exp;
         predictedValues = new double[exp.length][exp[0].length];
 
-        double MSE;
-        int epoch = 0;
+        double MSE = 0;
+        int epoch = 1;
 
         while(true){
 
@@ -93,14 +109,21 @@ public class MLP {
             hiddenLayer.adjustInputWeights(inputValues, outputWeights, predictedValues, expectedValues);
 
             //outputPredictedValues();
+            double previousMSE = MSE;
             MSE = calcMSE();
-            System.out.println("MSE = " + MSE);
+            System.out.println(title + "::" + epoch + ": MSE = " + MSE);
+            if(Math.abs((previousMSE - MSE)) < 0.0000000001) break;
             if(MSE < targetAccuracy) break;
-
+            /*else if(epoch > 1000 && MSE > 30){
+                writeData = false;
+                break;
+            }*/
+            else if(epoch%100000 == 0) saveWeights(epoch, outputFile);
             epoch++;
         }
 
-        outputPredictedValues(epoch);
+        System.out.println("Training complete at epoch " + epoch + "...");
+        if(writeData)saveWeights(epoch, outputFile);
 
     }
 
@@ -136,7 +159,9 @@ public class MLP {
         return prediction[0];
     }
 
-    public void saveWeights(File output){
+    public void saveWeights(int epoch, File output){
+
+        System.out.println("Now saving progress...");
 
         try {
             FileWriter writer = new FileWriter(output);
@@ -192,8 +217,6 @@ public class MLP {
 
             double[][] hiddenWeights = new double[weights.getInteger(NUM_HIDDEN_NODES)][weights.getInteger(NUM_HIDDEN_WEIGHTS)];
             double[][] outputWeights = new double[weights.getInteger(NUM_OUTPUT_NODES)][weights.getInteger(NUM_OUTPUT_WEIGHTS)];
-            double learningRate = weights.getDouble(LEARNING_RATE);
-            double moment = weights.getDouble(MOMENT);
 
             JsonArray hiddenJson = weights.getJsonArray(HIDDEN_WEIGHTS);
             JsonArray outputJson = weights.getJsonArray(OUTPUT_WEIGHTS);

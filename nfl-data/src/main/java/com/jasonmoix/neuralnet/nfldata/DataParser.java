@@ -161,6 +161,8 @@ public class DataParser {
         player = player.replace(" Q ", " ");
         player = player.replace(" O ", " ");
         player = player.replace(" D ", " ");
+        player = player.replace(" SUSP ", " ");
+        player = player.replace(" PUP ", " ");
         player = player.replace(" IR ", " ");
         player = player.replace(" @ ", " ");
         player = player.replace(" vs ", " ");
@@ -180,6 +182,8 @@ public class DataParser {
         player = player.replace(" II ", " ");
         player = player.replace(" III ", " ");
         player = player.replace(" IV ", " ");
+        player = player.replace("J. Don", "J.");
+        player = player.replace("De La Cruz", "DeLaCruz");
         player = player.replace("San Francisco ", "SF ");
         player = player.replace("San Diego ", "SD ");
         player = player.replace("Tampa Bay ", "TB ");
@@ -202,6 +206,7 @@ public class DataParser {
         player = player.replace(" DeLong ", " FA ");
         player = player.replace(" Suckerp*nch'd! ", " FA ");
         player = player.replace(" crapflappers ", " FA ");
+        player = player.replace("'", "");
         return player;
     }
 
@@ -215,6 +220,8 @@ public class DataParser {
         //System.out.println(player);
 
         String[] playerStats = player.split(" ");
+
+        String lastname = "duncan";
 
         playerData.put("last_name", playerStats[0])
                 .put("team", playerStats[1]);
@@ -233,7 +240,7 @@ public class DataParser {
 
         String[] statLabels = new String[]{"pa_yds","pa_tds","pa_int","pa_40_yd_comp",
                 "pa_40_yd_td","ru_att","ru_yds","ru_tds","ru_40_yd_att","ru_40_yd_td","re_tgt","re_rec","re_yds"
-                ,"re_td","re_40_yd_rec","re_40_yd_td","rt_td","2pt","fum"};
+                ,"re_td","re_40_yd_rec","re_40_yd_td","rt_td","two_pt","fum"};
 
         if(playerStats[4].equals("Bye")){
             playerData.put("opponent", playerStats[4]);
@@ -269,7 +276,7 @@ public class DataParser {
                 .put("name", teamNames.get(playerStats[2]));
 
 
-        String[] statLabels = new String[]{"pts_allowed","sack","safety","int","fum_rec","td","blk_kick","ret_td"};
+        String[] statLabels = new String[]{"pts_allowed","sack","safety","interception","fum_rec","td","blk_kick","ret_td"};
 
         if(playerStats[5].equals("Bye")){
 
@@ -307,7 +314,7 @@ public class DataParser {
         playerData.put("last_name", playerStats[2])
                 .put("team", playerStats[3]);
 
-        String[] statLabels = new String[]{"0-19", "20-29", "30-39", "40-49", "50", "made"};
+        String[] statLabels = new String[]{"less_19", "bw_20_29", "bw_30_39", "bw_40_49", "more_50", "made"};
 
         if(playerStats[6].equals("Bye")){
 

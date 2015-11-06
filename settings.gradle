@@ -3,4 +3,6 @@ include 'mlp-quant'
 include 'quant-test'
 include 'mlp-cat'
 include 'nfl-data'
+include 'nfl'
+include 'nfl-data-2'
 
