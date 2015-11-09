@@ -1,7 +1,6 @@
 package com.jasonmoix.nfldata2.database.tables;
 
 import com.jasonmoix.nfldata2.database.Database;
-import com.jasonmoix.nfldata2.database.data_structures.Player;
 import org.apache.poi.ss.usermodel.Row;
 
 import java.sql.Connection;
@@ -13,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by jmoix on 10/27/2015.
  */
-public class RB extends Player {
+public class RB{
 
     public String id;
     public String name;

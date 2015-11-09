@@ -1,48 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="163d7117-b3c0-4366-a3f8-6dc6c129c922" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/DST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/DST_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/DefensivePlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/DefensiveStatsAvg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/GameTotal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__mysql_mysql_connector_java_5_1_37.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/LineUp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/LineUpGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/OffensivePlayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/OffensiveStatsAvg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/PlayerData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Schedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/quant-test/src/main/java/SortObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Team.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/TeamData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Team_D_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Team_O_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR_STATS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/nfl-data-2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data/src/main/java/com/jasonmoix/neuralnet/nfldata/DataParser.java" afterPath="$PROJECT_DIR$/nfl-data/src/main/java/com/jasonmoix/neuralnet/nfldata/DataParser.java" />
+    <list default="true" id="163d7117-b3c0-4366-a3f8-6dc6c129c922" name="Default" comment="add prediction output and lineup generator">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/DKLineUp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/LineupGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/Player.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Prediction.java" />
+      <change type="DELETED" beforePath="C:\GameData\NeuralNet\nfl-data-2\build\classes\main\com\jasonmoix\nfldata2\database\data_structures\Player.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\GameData\NeuralNet\nfl-data-2\src\main\java\com\jasonmoix\nfldata2\database\data_structures\Player.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/K.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/K.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mlp-quant/build/classes/main/com/jasonmoix/neuralnet/mlpquant/MLP.class" afterPath="$PROJECT_DIR$/mlp-quant/build/classes/main/com/jasonmoix/neuralnet/mlpquant/MLP.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/Main.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/QB.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/QB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" afterPath="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quant-test/src/main/java/Main.java" afterPath="$PROJECT_DIR$/quant-test/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quant-test/build.gradle" afterPath="$PROJECT_DIR$/quant-test/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quant-test/quant-test.iml" afterPath="$PROJECT_DIR$/quant-test/quant-test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="neural-net.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,23 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java">
+      <file leaf-file-name="WR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="317" column="17" selection-start-line="317" selection-start-column="17" selection-end-line="317" selection-end-column="17" />
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -123,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -132,18 +104,86 @@
       <file leaf-file-name="NFLDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22331691">
-              <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.47304347">
+              <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MLP.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DKLineUp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/DKLineUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+              <folding>
+                <element signature="e#871#872#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LineupGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/LineupGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Schedule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TE.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Team.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -159,6 +199,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Jason Moix &lt;jmoix@privacystar.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -1090,11 +1135,21 @@
         <option value="$PROJECT_DIR$/nfl/src/main/java/database/tables/TETable.java" />
         <option value="$PROJECT_DIR$/nfl/src/main/java/database/tables/KStatsTable.java" />
         <option value="$PROJECT_DIR$/nfl/src/main/java/database/tables/KTable.java" />
-        <option value="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" />
         <option value="$PROJECT_DIR$/quant-test/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/nfl-data-2/build.gradle" />
         <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/main.java" />
         <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/main.java" />
+        <option value="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Prediction.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Player.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/Player.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/DKLineUp.java" />
+        <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/LineupGenerator.java" />
         <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" />
         <option value="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" />
         <option value="$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java" />
@@ -1297,7 +1352,155 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lineup_generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfl-data-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfldata2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lineup_generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_structures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfl-data-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfldata2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfl-data-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfldata2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural-net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NeuralNet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfl-data-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nfldata2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_structures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1412,6 +1615,7 @@
       <recent name="C:\GameData\NeuralNet\nfl-data-2\src\main\java\com\jasonmoix\nfldata2\database\data_structures" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.jasonmoix.nfldata2.lineup_generator.data_structures" />
       <recent name="com.jasonmoix.nfldata2" />
       <recent name="com.jasonmoix.nfldata2.database" />
       <recent name="database" />
@@ -1627,7 +1831,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1636,8 +1840,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32805908" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34593993" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1654,6 +1858,32 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3343882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.50208336" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32805908" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1666,8 +1896,21 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add prediction output and lineup generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="add prediction output and lineup generator" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java</url>
+          <line>573</line>
+          <properties class="com.jasonmoix.nfldata2.database.Database" method="sort" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1675,118 +1918,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/quant-test/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlp-quant/mlp-quant.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="58" selection-start-line="114" selection-start-column="58" selection-end-line="114" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/KStatsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="21" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/QBStatsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/QBTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/RBStatsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="32" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/RBTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/TETable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/TeamTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/OffensiveStatsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/KTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/KStatsTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="21" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/QBStatsTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2019,14 +2150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/DST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nfl/src/main/java/database/tables/KTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2038,7 +2161,15 @@
     <entry file="file://$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <caret line="114" column="55" selection-start-line="114" selection-start-column="55" selection-end-line="114" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/PlayerData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2046,15 +2177,136 @@
     <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="317" column="17" selection-start-line="317" selection-start-column="17" selection-end-line="317" selection-end-column="17" />
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Prediction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#584#585#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/DST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/DST_STATS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K_STATS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/DKLineUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding>
+            <element signature="e#871#872#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/LineupGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2064,15 +2316,15 @@
     <entry file="file://$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22331691">
-          <caret line="17" column="57" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.47304347">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding />
         </state>
       </provider>

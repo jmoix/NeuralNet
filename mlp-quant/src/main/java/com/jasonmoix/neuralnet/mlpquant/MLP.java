@@ -112,7 +112,7 @@ public class MLP {
             double previousMSE = MSE;
             MSE = calcMSE();
             System.out.println(title + "::" + epoch + ": MSE = " + MSE);
-            if(Math.abs((previousMSE - MSE)) < 0.0000000001) break;
+            if(Math.abs((previousMSE - MSE)) < 0.00000001) break;
             if(MSE < targetAccuracy) break;
             /*else if(epoch > 1000 && MSE > 30){
                 writeData = false;

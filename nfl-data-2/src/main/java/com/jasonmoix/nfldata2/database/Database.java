@@ -1,9 +1,12 @@
 package com.jasonmoix.nfldata2.database;
 
+import com.jasonmoix.neuralnet.mlpquant.MLP;
 import com.jasonmoix.nfldata2.database.tables.*;
 import com.jasonmoix.nfldata2.database.data_structures.*;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -46,7 +49,7 @@ public class Database {
     public static final String PW = "xxxx";
     public static final String Address = "jdbc:mysql://localhost:3306/nfldata2";
 
-    public static final int LAST_WEEK = 7;
+    public static final int LAST_WEEK = 8;
 
     public enum positions{
         QB,
@@ -445,7 +448,149 @@ public class Database {
 
     }
 
-    public void generateQBPredictions(int week){
+    public void getPredictions(){
+
+        File output = new File("C:\\data\\output\\predictions.xlsx");
+        ArrayList<Prediction> qb = sort(generateQBPredictions());
+        ArrayList<Prediction> rb = sort(generateRBPredictions());
+        ArrayList<Prediction> wr = sort(generateWRPredictions());
+        ArrayList<Prediction> te = sort(generateTEPredictions());
+        ArrayList<Prediction> dst = sort(generateDefensePredictions());
+
+        Workbook workbook = new XSSFWorkbook();
+
+        Sheet qbSheet = workbook.createSheet("QB");
+        int rowIndex = 0;
+        int cellIndex = 0;
+        Row row = qbSheet.createRow(rowIndex++);
+        row.createCell(cellIndex++).setCellValue("POSITION");
+        row.createCell(cellIndex++).setCellValue("NAME");
+        row.createCell(cellIndex++).setCellValue("TEAM");
+        row.createCell(cellIndex++).setCellValue("OPPONENT");
+        row.createCell(cellIndex).setCellValue("FANTASY RANK");
+
+        for(Prediction prediction : qb){
+            cellIndex = 0;
+            row = qbSheet.createRow(rowIndex++);
+            row.createCell(cellIndex++).setCellValue(prediction.position);
+            row.createCell(cellIndex++).setCellValue(prediction.name);
+            row.createCell(cellIndex++).setCellValue(prediction.team);
+            row.createCell(cellIndex++).setCellValue(prediction.opponent);
+            row.createCell(cellIndex).setCellValue(prediction.fantasyPoints);
+        }
+
+        Sheet rbSheet = workbook.createSheet("RB");
+        rowIndex = 0;
+        cellIndex = 0;
+        row = rbSheet.createRow(rowIndex++);
+        row.createCell(cellIndex++).setCellValue("POSITION");
+        row.createCell(cellIndex++).setCellValue("NAME");
+        row.createCell(cellIndex++).setCellValue("TEAM");
+        row.createCell(cellIndex++).setCellValue("OPPONENT");
+        row.createCell(cellIndex).setCellValue("FANTASY RANK");
+
+        for(Prediction prediction : rb){
+            cellIndex = 0;
+            row = rbSheet.createRow(rowIndex++);
+            row.createCell(cellIndex++).setCellValue(prediction.position);
+            row.createCell(cellIndex++).setCellValue(prediction.name);
+            row.createCell(cellIndex++).setCellValue(prediction.team);
+            row.createCell(cellIndex++).setCellValue(prediction.opponent);
+            row.createCell(cellIndex).setCellValue(prediction.fantasyPoints);
+        }
+
+        Sheet wrSheet = workbook.createSheet("WR");
+        rowIndex = 0;
+        cellIndex = 0;
+        row = wrSheet.createRow(rowIndex++);
+        row.createCell(cellIndex++).setCellValue("POSITION");
+        row.createCell(cellIndex++).setCellValue("NAME");
+        row.createCell(cellIndex++).setCellValue("TEAM");
+        row.createCell(cellIndex++).setCellValue("OPPONENT");
+        row.createCell(cellIndex).setCellValue("FANTASY RANK");
+
+        for(Prediction prediction : wr){
+            cellIndex = 0;
+            row = wrSheet.createRow(rowIndex++);
+            row.createCell(cellIndex++).setCellValue(prediction.position);
+            row.createCell(cellIndex++).setCellValue(prediction.name);
+            row.createCell(cellIndex++).setCellValue(prediction.team);
+            row.createCell(cellIndex++).setCellValue(prediction.opponent);
+            row.createCell(cellIndex).setCellValue(prediction.fantasyPoints);
+        }
+
+        Sheet teSheet = workbook.createSheet("TE");
+        rowIndex = 0;
+        cellIndex = 0;
+        row = teSheet.createRow(rowIndex++);
+        row.createCell(cellIndex++).setCellValue("POSITION");
+        row.createCell(cellIndex++).setCellValue("NAME");
+        row.createCell(cellIndex++).setCellValue("TEAM");
+        row.createCell(cellIndex++).setCellValue("OPPONENT");
+        row.createCell(cellIndex).setCellValue("FANTASY RANK");
+
+        for(Prediction prediction : te){
+            cellIndex = 0;
+            row = teSheet.createRow(rowIndex++);
+            row.createCell(cellIndex++).setCellValue(prediction.position);
+            row.createCell(cellIndex++).setCellValue(prediction.name);
+            row.createCell(cellIndex++).setCellValue(prediction.team);
+            row.createCell(cellIndex++).setCellValue(prediction.opponent);
+            row.createCell(cellIndex).setCellValue(prediction.fantasyPoints);
+        }
+
+        Sheet dstSheet = workbook.createSheet("DST");
+        rowIndex = 0;
+        cellIndex = 0;
+        row = dstSheet.createRow(rowIndex++);
+        row.createCell(cellIndex++).setCellValue("POSITION");
+        row.createCell(cellIndex++).setCellValue("NAME");
+        row.createCell(cellIndex++).setCellValue("TEAM");
+        row.createCell(cellIndex++).setCellValue("OPPONENT");
+        row.createCell(cellIndex).setCellValue("FANTASY RANK");
+
+        for(Prediction prediction : dst){
+            cellIndex = 0;
+            row = dstSheet.createRow(rowIndex++);
+            row.createCell(cellIndex++).setCellValue(prediction.position);
+            row.createCell(cellIndex++).setCellValue(prediction.name);
+            row.createCell(cellIndex++).setCellValue(prediction.team);
+            row.createCell(cellIndex++).setCellValue(prediction.opponent);
+            row.createCell(cellIndex).setCellValue(prediction.fantasyPoints);
+        }
+
+        try {
+
+            FileOutputStream out = new FileOutputStream(output);
+            workbook.write(out);
+            out.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public ArrayList<Prediction> sort(ArrayList<Prediction> predictions){
+
+        for(int i = 1; i < predictions.size(); i++){
+            Prediction prediction = predictions.get(i);
+            int j = i - 1;
+            while (j >= 0 && prediction.moreThan(predictions.get(j))){
+                Prediction buffer = predictions.get(j);
+                predictions.set(j, prediction);
+                predictions.set(j + 1, buffer);
+                j--;
+            }
+        }
+
+        return predictions;
+    }
+
+    public ArrayList<Prediction> generateQBPredictions(){
+
+        ArrayList<Prediction> predictions = new ArrayList<>();
+        MLP mlp = new MLP(new File("C:\\data\\mlps\\qb.txt"));
 
         try{
 
@@ -454,9 +599,10 @@ public class Database {
 
             while(resultSet.next()){
                 QB player = new QB(resultSet);
-                String opponent = getOpponent(player.team, week);
+                String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, week), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    predictions.add(new Prediction(player.name, player.team, "QB", opponent, mlp.predict(input)));
                 }
 
             }
@@ -464,9 +610,14 @@ public class Database {
         }catch (SQLException e){
             e.printStackTrace();
         }
+
+        return predictions;
     }
 
-    public void generateRBPredictions(int week){
+    public ArrayList<Prediction> generateRBPredictions(){
+
+        ArrayList<Prediction> predictions = new ArrayList<>();
+        MLP mlp = new MLP(new File("C:\\data\\mlps\\rb.txt"));
 
         try{
 
@@ -475,9 +626,10 @@ public class Database {
 
             while(resultSet.next()){
                 RB player = new RB(resultSet);
-                String opponent = getOpponent(player.team, week);
+                String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, week), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    predictions.add(new Prediction(player.name, player.team, "RB", opponent, mlp.predict(input)));
                 }
 
             }
@@ -486,9 +638,14 @@ public class Database {
             e.printStackTrace();
         }
 
+        return predictions;
+
     }
 
-    public void generateWRPredictions(int week){
+    public ArrayList<Prediction> generateWRPredictions(){
+
+        ArrayList<Prediction> predictions = new ArrayList<>();
+        MLP mlp = new MLP(new File("C:\\data\\mlps\\wr.txt"));
 
         try{
 
@@ -497,9 +654,10 @@ public class Database {
 
             while(resultSet.next()){
                 WR player = new WR(resultSet);
-                String opponent = getOpponent(player.team, week);
+                String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, week), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    predictions.add(new Prediction(player.name, player.team, "WR", opponent, mlp.predict(input)));
                 }
 
             }
@@ -508,9 +666,14 @@ public class Database {
             e.printStackTrace();
         }
 
+        return predictions;
+
     }
 
-    public void generateTEPredictions(int week){
+    public ArrayList<Prediction> generateTEPredictions(){
+
+        ArrayList<Prediction> predictions = new ArrayList<>();
+        MLP mlp = new MLP(new File("C:\\data\\mlps\\te.txt"));
 
         try{
 
@@ -519,9 +682,10 @@ public class Database {
 
             while(resultSet.next()){
                 TE player = new TE(resultSet);
-                String opponent = getOpponent(player.team, week);
+                String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, week), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    predictions.add(new Prediction(player.name, player.team, "TE", opponent, mlp.predict(input)));
                 }
 
             }
@@ -530,9 +694,14 @@ public class Database {
             e.printStackTrace();
         }
 
+        return predictions;
+
     }
 
-    public void generateDefensePredictions(int week){
+    public ArrayList<Prediction> generateDefensePredictions(){
+
+        ArrayList<Prediction> predictions = new ArrayList<>();
+        MLP mlp = new MLP(new File("C:\\data\\mlps\\dst.txt"));
 
         try{
 
@@ -541,9 +710,10 @@ public class Database {
 
             while(resultSet.next()){
                 Team team = new Team(resultSet);
-                String opponent = getOpponent(team.id, week);
+                String opponent = getOpponent(team.id, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new TeamData(getHomeAway(team.id, week), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id))).toPredictionArray();
+                    double[] input = (new TeamData(getHomeAway(team.id, LAST_WEEK + 1), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id))).toPredictionArray();
+                    predictions.add(new Prediction(team.name, team.id, "DST", opponent, mlp.predict(input)));
                 }
 
             }
@@ -551,6 +721,8 @@ public class Database {
         }catch (SQLException e){
             e.printStackTrace();
         }
+
+        return predictions;
 
     }
 
