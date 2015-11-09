@@ -5,20 +5,20 @@ package com.jasonmoix.nfldata2.database.data_structures;
  */
 public class TeamData {
 
-    public int home;
+    public double[] scheduleData;
     public double[] offensiveData;
     public double[] defensiveData;
     public double fantasyPoints;
 
-    public TeamData(int home, double[] offensiveData, double[] defensiveData, double fantasyPoints){
-        this.home = home;
+    public TeamData(double[] scheduleData, double[] offensiveData, double[] defensiveData, double fantasyPoints){
+        this.scheduleData = scheduleData;
         this.offensiveData = offensiveData;
         this.defensiveData = defensiveData;
         this.fantasyPoints = fantasyPoints;
     }
 
-    public TeamData(int home, double[] offensiveData, double[] defensiveData){
-        this.home = home;
+    public TeamData(double[] scheduleData, double[] offensiveData, double[] defensiveData){
+        this.scheduleData = scheduleData;
         this.offensiveData = offensiveData;
         this.defensiveData = defensiveData;
         this.fantasyPoints = 0;
@@ -26,7 +26,7 @@ public class TeamData {
 
     public double[] toTrainingArray(){
 
-        double[] data = new double[offensiveData.length + defensiveData.length + 2];
+        double[] data = new double[offensiveData.length + defensiveData.length + scheduleData.length + 1];
         int j = 0;
 
         for(int i = 0; i < offensiveData.length; i++){
@@ -37,7 +37,9 @@ public class TeamData {
             data[j++] = defensiveData[i];
         }
 
-        data[j++] = home;
+        for(int i = 0; i < scheduleData.length; i++){
+            data[j++] = scheduleData[i];
+        }
 
         data[j] = fantasyPoints;
 
@@ -46,7 +48,7 @@ public class TeamData {
 
     public double[] toPredictionArray(){
 
-        double[] data = new double[offensiveData.length + defensiveData.length + 1];
+        double[] data = new double[offensiveData.length + defensiveData.length + scheduleData.length];
         int j = 0;
 
         for(int i = 0; i < offensiveData.length; i++){
@@ -57,7 +59,9 @@ public class TeamData {
             data[j++] = defensiveData[i];
         }
 
-        data[j] = home;
+        for(int i = 0; i < scheduleData.length; i++){
+            data[j++] = scheduleData[i];
+        }
 
         return data;
 

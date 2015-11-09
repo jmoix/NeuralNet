@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args){
 
         Database db = new Database();
-        //db.initData();
+        db.initData();
         trainQBMLP(getInputData(db.getQBTrainingData()), getOutputData(db.getQBTrainingData()));
         trainRBMLP(getInputData(db.getRBTrainingData()), getOutputData(db.getRBTrainingData()));
         trainWRMLP(getInputData(db.getWRTrainingData()), getOutputData(db.getWRTrainingData()));

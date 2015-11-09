@@ -305,7 +305,7 @@ public class Database {
                 QB_STATS stats = new QB_STATS(resultSet);
                 String opponent = getOpponent(player.team, resultSet.getInt(QB_STATS.WEEK));
                 if(!opponent.equals("bye") && stats.played()){
-                    data.add(new PlayerData(getHomeAway(player.team, resultSet.getInt(QB_STATS.WEEK)), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
+                    data.add(new PlayerData(getScheduleData(player.team, resultSet.getInt(QB_STATS.WEEK)), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
                 }
             }
 
@@ -337,7 +337,7 @@ public class Database {
                 RB_STATS stats = new RB_STATS(resultSet);
                 String opponent = getOpponent(player.team, resultSet.getInt(RB_STATS.WEEK));
                 if(!opponent.equals("bye") && stats.played()){
-                    data.add(new PlayerData(getHomeAway(player.team, resultSet.getInt(RB_STATS.WEEK)), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
+                    data.add(new PlayerData(getScheduleData(player.team, resultSet.getInt(RB_STATS.WEEK)), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
                 }
             }
 
@@ -369,7 +369,7 @@ public class Database {
                 WR_STATS stats = new WR_STATS(resultSet);
                 String opponent = getOpponent(player.team, resultSet.getInt(WR_STATS.WEEK));
                 if(!opponent.equals("bye") && stats.played()){
-                    data.add(new PlayerData(getHomeAway(player.team, resultSet.getInt(WR_STATS.WEEK)), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
+                    data.add(new PlayerData(getScheduleData(player.team, resultSet.getInt(WR_STATS.WEEK)), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
                 }
             }
 
@@ -401,7 +401,7 @@ public class Database {
                 TE_STATS stats = new TE_STATS(resultSet);
                 String opponent = getOpponent(player.team, resultSet.getInt(TE_STATS.WEEK));
                 if(!opponent.equals("bye") && stats.played()){
-                    data.add(new PlayerData(getHomeAway(player.team, resultSet.getInt(TE_STATS.WEEK)), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
+                    data.add(new PlayerData(getScheduleData(player.team, resultSet.getInt(TE_STATS.WEEK)), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent), stats.fantasyPoints()));
                 }
             }
 
@@ -433,7 +433,7 @@ public class Database {
                 Team_D_STATS stats = new Team_D_STATS(resultSet);
                 String opponent = getOpponent(team.id, resultSet.getInt(Team_D_STATS.WEEK));
                 if(!opponent.equals("bye")){
-                    data.add(new TeamData(getHomeAway(team.id, resultSet.getInt(Team_D_STATS.WEEK)), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id), stats.fantasyPoints()));
+                    data.add(new TeamData(getScheduleData(team.id, resultSet.getInt(Team_D_STATS.WEEK)), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id), stats.fantasyPoints()));
                 }
             }
 
@@ -601,7 +601,7 @@ public class Database {
                 QB player = new QB(resultSet);
                 String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getScheduleData(player.team, LAST_WEEK + 1), getPlayerData(QB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
                     predictions.add(new Prediction(player.name, player.team, "QB", opponent, mlp.predict(input)));
                 }
 
@@ -628,7 +628,7 @@ public class Database {
                 RB player = new RB(resultSet);
                 String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getScheduleData(player.team, LAST_WEEK + 1), getPlayerData(RB.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
                     predictions.add(new Prediction(player.name, player.team, "RB", opponent, mlp.predict(input)));
                 }
 
@@ -656,7 +656,7 @@ public class Database {
                 WR player = new WR(resultSet);
                 String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getScheduleData(player.team, LAST_WEEK + 1), getPlayerData(WR.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
                     predictions.add(new Prediction(player.name, player.team, "WR", opponent, mlp.predict(input)));
                 }
 
@@ -684,7 +684,7 @@ public class Database {
                 TE player = new TE(resultSet);
                 String opponent = getOpponent(player.team, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new PlayerData(getHomeAway(player.team, LAST_WEEK + 1), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
+                    double[] input = (new PlayerData(getScheduleData(player.team, LAST_WEEK + 1), getPlayerData(TE.TABLE_NAME, player.id), getTeamOffensiveData(player.team), getTeamDefensiveData(opponent))).toPredictionArray();
                     predictions.add(new Prediction(player.name, player.team, "TE", opponent, mlp.predict(input)));
                 }
 
@@ -712,7 +712,7 @@ public class Database {
                 Team team = new Team(resultSet);
                 String opponent = getOpponent(team.id, LAST_WEEK + 1);
                 if(!opponent.equals("bye")) {
-                    double[] input = (new TeamData(getHomeAway(team.id, LAST_WEEK + 1), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id))).toPredictionArray();
+                    double[] input = (new TeamData(getScheduleData(team.id, LAST_WEEK + 1), getTeamOffensiveData(opponent), getTeamDefensiveData(team.id))).toPredictionArray();
                     predictions.add(new Prediction(team.name, team.id, "DST", opponent, mlp.predict(input)));
                 }
 
@@ -1045,6 +1045,28 @@ public class Database {
         }
 
         return home;
+    }
+
+    public double[] getScheduleData(String teamId, int week){
+
+        String sid = teamId + week;
+        double[] data = null;
+
+        try{
+
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM " + Schedule.TABLE_NAME + " WHERE " + Schedule.ID + " ='" + sid + "'");
+            if(resultSet.first()){
+                Schedule schedule = new Schedule(resultSet);
+                data = schedule.getData();
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return data;
+
     }
 
     public void updatePercentages(){
