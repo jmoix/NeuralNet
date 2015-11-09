@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="163d7117-b3c0-4366-a3f8-6dc6c129c922" name="Default" comment="add prediction output and lineup generator">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/DKLineUp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/LineupGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/lineup_generator/data_structures/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/data_structures/Prediction.java" />
-      <change type="DELETED" beforePath="C:\GameData\NeuralNet\nfl-data-2\build\classes\main\com\jasonmoix\nfldata2\database\data_structures\Player.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GameData\NeuralNet\nfl-data-2\src\main\java\com\jasonmoix\nfldata2\database\data_structures\Player.java" afterPath="" />
+    <list default="true" id="163d7117-b3c0-4366-a3f8-6dc6c129c922" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" />
@@ -18,14 +12,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/K.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" afterPath="$PROJECT_DIR$/mlp-quant/src/main/java/com/jasonmoix/neuralnet/mlpquant/MLP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/QB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/RB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/TE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" afterPath="$PROJECT_DIR$/nfl-data-2/src/main/java/com/jasonmoix/nfldata2/database/tables/WR.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="neural-net.iws" />
@@ -1827,6 +1813,13 @@
       <option name="number" value="Default" />
       <updated>1445727046699</updated>
     </task>
+    <task id="LOCAL-00001" summary="add prediction output and lineup generator">
+      <created>1447077737470</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1447077737470</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1840,7 +1833,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34593993" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
