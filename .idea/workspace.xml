@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163d7117-b3c0-4366-a3f8-6dc6c129c922" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database$positions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/Database.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/K.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/K.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mlp-quant/build/classes/main/com/jasonmoix/neuralnet/mlpquant/MLP.class" afterPath="$PROJECT_DIR$/mlp-quant/build/classes/main/com/jasonmoix/neuralnet/mlpquant/MLP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/Main.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/QB.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/QB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/RB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/TE.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" afterPath="$PROJECT_DIR$/nfl-data-2/build/classes/main/com/jasonmoix/nfldata2/database/tables/WR.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="neural-net.iws" />
@@ -90,8 +80,8 @@
       <file leaf-file-name="NFLDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47304347">
-              <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.53217393">
+              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -1819,7 +1809,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447077737470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="small refactor">
+      <created>1447077767245</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447077767245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1833,7 +1829,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34593993" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1891,7 +1887,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add prediction output and lineup generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="add prediction output and lineup generator" />
+    <MESSAGE value="small refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="small refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2316,8 +2313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quant-test/src/main/java/NFLDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47304347">
-          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.53217393">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
           <folding />
         </state>
       </provider>
